@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+altair
+databricks-sql-connector
+streamlit-autorefresh
+dotenv

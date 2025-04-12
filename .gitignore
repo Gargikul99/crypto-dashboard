@@ -1,0 +1,16 @@
+# Environment variables
+.env
+
+# Log files
+*.log
+logs/
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# VS Code or editor files
+.vscode/
+.DS_Store
+Thumbs.db
+
