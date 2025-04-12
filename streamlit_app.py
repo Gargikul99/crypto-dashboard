@@ -62,7 +62,7 @@ with col2:
     st.metric("🪙 Ethereum (USD)", f"${latest['ethereun']:.2f}")
 
 btc_chart = alt.Chart(df).mark_line().encode(
-    x=alt.X('timestamp:T', title='Time (HH:MM:SS)', axis=alt.Axis(format='%H:%M:%S')),
+    x=alt.X('timestamp:T', title='Time (UTC)(HH:MM:SS)', axis=alt.Axis(format='%H:%M:%S')),
     y=alt.Y(f'{btc_col}:Q', title='BTC Price', scale=alt.Scale(domain=[btc_min, btc_max])),
     tooltip=[alt.Tooltip('timestamp:T', title='Timestamp (UTC)', format='%Y-%m-%d %H:%M:%S'),
              alt.Tooltip('bitcoin:Q', title='BTC Price')]
@@ -74,7 +74,7 @@ btc_chart = alt.Chart(df).mark_line().encode(
 
 
 eth_chart = alt.Chart(df).mark_line().encode(
-    x=alt.X('timestamp:T', title='Time (HH:MM:SS)', axis=alt.Axis(format='%H:%M:%S')),
+    x=alt.X('timestamp:T', title='Time (UTC)(HH:MM:SS)', axis=alt.Axis(format='%H:%M:%S')),
     y=alt.Y(f'{eth_col}:Q', title='ETH Price', scale=alt.Scale(domain=[eth_min, eth_max])),
     tooltip=[alt.Tooltip('timestamp:T', title='Timestamp (UTC)', format='%Y-%m-%d %H:%M:%S'),
              alt.Tooltip('ethereun:Q', title='Ethereum Price')]
