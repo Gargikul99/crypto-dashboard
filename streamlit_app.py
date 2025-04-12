@@ -34,12 +34,8 @@ df['timestamp'] = pd.to_datetime(df['timestamp'])
 
 now = df['timestamp'].max()
 
-minutes = st.slider(
-    f"⏱️ Use the slider to get data from the last x minutes (x = {120})",  
-    min_value=50,
-    max_value=200,
-    value=120
-)
+minutes = st.slider(" Use the slider to get data from the last x minutes", 50, 200, 100)
+st.markdown(f"x = {minutes}")
 df = df[df['timestamp'] >= now - timedelta(minutes=minutes)]
 
 
